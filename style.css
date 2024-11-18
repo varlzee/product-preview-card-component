@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --Dark_cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very_dark_blue: hsl(212, 21%, 14%);
+    --Dark_grayish_blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --darker_cyan: #1F4529;
+
+    --font_Montserrat: "Montserrat", serif;
+    --font_Fraunces: "Fraunces", serif;
+}
+
+body{
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Cream);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 40vw;
+    height: 60vh;
+}
+
+#product_picture{
+    width: 45%;
+    height:100%;
+    border-radius: 10px 0px 0px 10px;
+}
+#product_picture2{
+    display: none;
+}
+#product_text{
+    background-color: var(--White);
+    width: 55%;
+    height: 52vh;
+    padding: 5%;
+    border-radius: 0px 10px 10px 0px;
+}
+#perfume_text{
+    font-family: var(--font_Montserrat);
+    font-weight: 500;
+    color: var(--Dark_grayish_blue);
+    margin-top: 2%;
+}
+#heading{
+    font-family: var(--font_Fraunces);
+    font-weight: 700;
+}
+#description{
+    font-family: var(--font_Montserrat);
+    color: var(--Dark_grayish_blue);
+}
+#firstNumber{
+    font-family: var(--font_Fraunces);
+    font-weight: 700;
+    color: var(--Dark_cyan);
+    font-size: 26px;
+}
+#secondNumber{
+    font-family: var(--font_Montserrat);
+    color: var(--Dark_grayish_blue); 
+    font-size: 12px;
+    margin-left: 10%;
+    margin-bottom: 4%;
+}
+button{
+    padding: 4% 25%;
+    font-family: var(--font_Montserrat);
+    background-color: var(--Dark_cyan);
+    color: var(--White);
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;   
+}
+button:hover{
+    background-color: var(--darker_cyan);
+}
+
+@media screen and (max-width: 500px){
+    .wrapper{
+        flex-direction: column;
+    }
+    #product_picture{
+        display: none;
+    }
+    #product_picture2{
+        display: flex;
+        width: 87vw;
+        border-radius: 10px 10px 0px 0px;
+    }
+    #product_text{
+        width: 80vw;
+        height: 100vh;
+        border-radius: 0px 0px 10px 10px;
+    }
+    #perfume_text{
+        font-size: 1em;
+    }
+    #heading{
+        font-size: 1.8em;
+        margin-top: -0.5%;
+    }
+    #description{
+        font-size: 0.9em;
+    }
+    #firstNumber{
+        font-size: 2em;
+    }
+    #secondNumber{
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 800px){
+    .wrapper{
+        width: 70vw;
+    }
+    #product_picture{
+        height: 80vh;
+    }
+    #product_text{
+        height: 69.5vh;
+    }
+}
